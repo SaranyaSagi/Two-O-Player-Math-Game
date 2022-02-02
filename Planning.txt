@@ -1,0 +1,81 @@
+- Create a 2-player math game where players take turns
+to answer simple math questions
+- A new math question is generated for each turn by picking 
+two numbers between 1 - 20
+- The player whose turn it is
+...is prompted the question and must answer correctly or lose a life.
+
+
+Details
+players
+- start with 3 lives
+- lose life if answer is wrong.
+After each turn 
+- game should output new scores for both players. 
+(1/3 or 2/3 or 3/3)
+- game should not end until one of players loses all lives
+(0/3) 
+At this point winner should be anounceds and their score. 
+
+Example prompt
+Player x: Question? 
+gets.chomp takes in answer
+Player x: says if its correct or not
+Based on gets.chomp and if its correct or not
+update lives and display like this
+...P1: 2/3 vs P2: 3/3
+---New Turn---
+Repeat till someone has 0/3
+Just output 
+Player x wines with a score of 1/3
+----Game Over----
+Good Bye!
+
+Task 1: Extract Nouns for Classes
+Game
+Players 
+lives
+question_num_generator
+
+Task 2: What is role of each class 
+- Write a brief para describing role
+Remember
+1. State: Store data describing themselves (variables)
+2. Behaviour: Defining actions that can be performed on them (methods)
+
+Write down methods for each class 
+...also speak on following points.
+
+--> What information is relevant to each class?
+--> What will they need in order to be initialized?
+--> What public methods will be defined on them?
+
+Furthermore:
+
+--> Which class will contain the game loop (where each instance of the loop is the other players turn)?
+--> Which class should manage who the current_player is?
+--> Which class(es) will contain user I/O and which will not have any?
+
+
+class Game
+- initialize(name)
+- start message
+- show lives function
+- check lives function
+- winner function to show winner message
+- new turn function to show new turn message
+
+class Players
+- attr_reader for lives and name
+- initialize
+- lose a life function
+- dead function to check if lives = 0
+- new question function with gets.chomp to store answer
+and check if its correct or not with if/else
+
+class Robot
+- initialize
+- funtion for displaying question
+- answer funciton that shows input.
+
+
