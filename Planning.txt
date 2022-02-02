@@ -60,8 +60,8 @@ Furthermore:
 class Game
 - initialize(name)
 - start message
-- show lives function
-- check lives function
+- show remaining lives function
+- check lives and keep track of score function
 - winner function to show winner message
 - new turn function to show new turn message
 
