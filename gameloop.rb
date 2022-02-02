@@ -2,8 +2,8 @@ class Game
 
   def initialize(name)
     @name = name
-    @player_1 = Players.new('Player 1')
-    @player_2 = Players.new('Player 2')
+    @player_1 = Players.new('Player 1') #from player class
+    @player_2 = Players.new('Player 2') #from player class
   end
 
   def start
@@ -27,7 +27,7 @@ class Game
     puts "#{player.name} wins with a score of #{player.lives}/3"
     puts "------GAME-OVER--------------------"
     puts "Goodbye!"
-    exit(0)
+    exit(0)  # to exit out of game
   end
 
   def turn
@@ -37,7 +37,7 @@ class Game
     check_lives
     show_remaining_lives
     puts "-------NEW-TURN---------------------"
-    turn
+    turn  # go back into loop till check lives = dead? , then winner message
   end
 
 end

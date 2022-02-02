@@ -15,7 +15,7 @@ class Players
   end
 
   def new_question
-    new_question = Numberbot.new
+    new_question = Numberbot.new # from num gen class
     new_question.question(name)
     
     print '> '
